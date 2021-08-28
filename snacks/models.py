@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 
 class Snack(models.Model):
-  title = models.CharField(max_length=64)
+  name = models.CharField(max_length=64)
   description = models.TextField(max_length=150, default=0)
   purchaser = models.ForeignKey(get_user_model(), on_delete=models.CASCADE) 
 
